@@ -4,6 +4,14 @@ title: About
 permalink: /about
 ---
 
-*This is an about page.*
+# About
 
-Feel free to tell the world about what you love! 😍
+Write about yourself here. This is your about page.
+
+You can write in **Markdown** just like in Obsidian.
+
+## Contact
+
+- Email: your@email.com
+- GitHub: [yourusername](https://github.com/yourusername)
+- Twitter: [@yourhandle](https://twitter.com/yourhandle)

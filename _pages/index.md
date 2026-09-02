@@ -1,33 +1,30 @@
 ---
 layout: page
 title: Home
-id: home
 permalink: /
 ---
 
-# Welcome! 🌱
+<section class="home-latest">
+   <h2>Latest</h2>
+   {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
+   {% for note in recent_notes limit: 10 %}
+      {% unless note.title == "Essays" or note.title == "About me" or note.title == "Index" %}
+      <div class="post-item">
+         <span class="post-date">{{ note.last_modified_at | date: "%B %d, %Y" }}</span>
+         <h3><a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></h3>
+      </div>
+      {% endunless %}
+   {% endfor %}
+</section>
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
-</p>
-
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-<strong>Recently updated notes</strong>
-
-<ul>
-  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
-  {% for note in recent_notes limit: 5 %}
-    <li>
-      {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-</style>
+{% assign all_tags = site.notes | map: "tags" | join: "," | split: "," | uniq | sort %}
+{% if all_tags.size > 0 and all_tags[0] != empty %}
+<section class="home-topics">
+   <h2>Topics</h2>
+   <div class="topics-list">
+      {% for tag in all_tags %}
+      <a href="{{ site.baseurl }}/topics#{{ tag | slugify }}" class="topic-tag">{{ tag }}</a>
+      {% endfor %}
+   </div>
+</section>
+{% endif %}
