@@ -8,7 +8,7 @@ permalink: /
   <h2>Latest</h2>
   {% for post in site.posts %}
   <article class="post-item">
-    <time>{{ post.date | date: '%B %d, %Y' }}</time>
+    <time>{{ post.date | date: '%B %d, %Y' }} · {{ post.content | number_of_words | divided_by: 200 | at_least: 1 }} min read</time>
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
     {% if post.excerpt %}
     <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
