@@ -8,10 +8,14 @@ permalink: /now
 
 Last updated: {{ site.time | date: '%B %d, %Y' }}
 
-## Building this website
+## Current project
 
-Creating a personal space on the internet to share my thoughts and writing.
+[What are you working on?]
 
 ## Learning
 
-Exploring web development, static site generators, and minimal design.
+[What are you learning?]
+
+## Reading
+
+[What are you reading?]

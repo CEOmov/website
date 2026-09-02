@@ -6,13 +6,17 @@ permalink: /about
 
 # About
 
-I'm Karim. This is my personal website where I share thoughts, essays, and notes.
+I'm [Your Name]. I write about [your interests].
+
+## What I do
+
+[Tell the world about what you do]
 
 ## Contact
 
-- Email: hello@karimabdelali.com
-- GitHub: [github.com/CEOmov](https://github.com/CEOmov)
+- Email: [your@email.com]
+- GitHub: [yourusername](https://github.com/yourusername)
 
 ## Colophon
 
-This site is built with [Jekyll](https://jekyllrb.com/) and hosted on [Vercel](https://vercel.com/). The design is inspired by [Steph Ango](https://stephango.com/).
+This site is built with [Jekyll](https://jekyllrb.com/) and hosted on [Vercel](https://vercel.com/).
