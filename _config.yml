@@ -8,7 +8,7 @@ permalink: pretty
 collections:
   notes:
     output: true
-    permalink: /:slug
+    permalink: /:title
   pages:
     output: true
 
