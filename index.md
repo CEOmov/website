@@ -34,7 +34,7 @@ permalink: /
 {% assign all_tags = site.notes | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
 {% if all_tags.size > 0 and all_tags[0] != empty %}
 <section class="topics">
-  <h2>Topics</h2>
+  <h2><a href="{{ site.baseurl }}/topics/">Topics</a></h2>
   <p class="tag-list">
     {% for tag in all_tags %}
     <a href="{{ site.baseurl }}/topics/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
