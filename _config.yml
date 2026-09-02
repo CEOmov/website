@@ -9,6 +9,8 @@ collections:
   notes:
     output: true
     permalink: /:slug
+  pages:
+    output: true
 
 defaults:
   - scope:
@@ -19,3 +21,7 @@ defaults:
       path: _notes
     values:
       layout: note
+  - scope:
+      path: _pages
+    values:
+      layout: default
