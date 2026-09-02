@@ -1,6 +1,8 @@
 ---
-id: b06e8d6f-a6ec-458f-9c5c-1ff5d7ba7ab3
+title: About Me
+tags: [about]
 ---
-yo
 
+I'm Karim. I write about design, technology, and productivity.
 
+This is my personal corner of the internet where I share thoughts and essays.

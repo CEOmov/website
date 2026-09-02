@@ -4,14 +4,8 @@ title: About
 permalink: /about
 ---
 
-# About
+I'm Karim. This is my digital garden — a place where I share thoughts, essays, and notes on things I'm thinking about.
 
-Write about yourself here. This is your about page.
+I write about design, technology, productivity, and whatever else catches my attention.
 
-You can write in **Markdown** just like in Obsidian.
-
-## Contact
-
-- Email: your@email.com
-- GitHub: [yourusername](https://github.com/yourusername)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+Feel free to explore. Start with the [latest writing]({{ site.baseurl }}/), or browse by [topic]({{ site.baseurl }}/topics).

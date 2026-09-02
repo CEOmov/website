@@ -1,146 +1,290 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
-$border-radius: 4px;
-$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+// Steph Ango / PaperMod inspired theme
+// Warm, minimal, editorial
 
-body {
-  box-sizing: content-box;
-  font-family: $font-family;
-  margin: 0 auto;
-  line-height: 1.7;
-  padding: 4vh 6vw;
-  overflow-x: hidden;
-  color: $color-text;
-  font-size: 1rem;
-  max-width: 63em;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$max-width: 680px;
 
-  @media (min-width: 820px) {
-    font-size: 1.2rem;
+// Light mode (default)
+$color-bg: #FEFDFC;
+$color-text: #403E3C;
+$color-heading: #100F0F;
+$color-muted: #6F6E6C;
+$color-border: #E6E4DE;
+$color-accent: #284B63;
+$color-code-bg: #F5F4F2;
+
+// Dark mode
+$dark-color-bg: #100F0F;
+$dark-color-text: #CECDCA;
+$dark-color-heading: #FEFDFC;
+$dark-color-muted: #8A8986;
+$dark-color-border: #403E3C;
+$dark-color-accent: #7B97AA;
+$dark-color-code-bg: #1C1B1A;
+
+:root {
+  --color-bg: #{$color-bg};
+  --color-text: #{$color-text};
+  --color-heading: #{$color-heading};
+  --color-muted: #{$color-muted};
+  --color-border: #{$color-border};
+  --color-accent: #{$color-accent};
+  --color-code-bg: #{$color-code-bg};
+}
+
+[data-theme="dark"] {
+  --color-bg: #{$dark-color-bg};
+  --color-text: #{$dark-color-text};
+  --col// Steph Ango / PaperMod inspired theme
+// Warm, minimal, editorial
+
+$font-family:or// Warm, minimal, editorial
+
+$font-famlo
+$font-family: -apple-systcen$max-width: 680px;
+
+// Light mode (default)
+$color-bg: #FEFDFC;
+$color-text: #403E3C;
+$color-headfa
+// Light mode (dy;
+$color-bg: #FEFDFC;
+$c  $color-text: #403E
+ $color-heading: #100te$color-muted: #6F6E6C;
+: $color-border: #E6E4Drgin: 0 auto;
+  padding: 4$color-code-bg: #F5F4Fma
+// Dark mode
+$dark-colbac$dark-coloror$dark-color-tcolor 0.25s $dark-color-heading: #FEFthing: antialiased;
+  -moz-osx-f$dark-color-border: #403E3}
+$dark-color-accent: #7B97AA {$dark-color-code-bg: #1C1B1-c
+:root {
+  --color-bg: #{$cogn-  --co c  --color-text: #{$color-t 2  --color-heading: #{$color-he    --color-muted: #{$color-muted};
+  -b  --color-border: #{$color-bordet-size: 1.05rem;
+    font-weight: 600;  --color-code-bg: #{$color-code-
   }
-}
 
-time {
-  display: block;
-  color: $color-subtext;
-  margin: 0.5em 0 1em;
-}
+[data-theme="dark"] {
+  --color-b none  
+    &:hover {
+       --color-text: #{$dark-color-t v  --col// Steph Ango / PaperMod insav// Warm, minimal, editorial
 
-footer {
-  margin: 2em 0;
-  font-size: 0.8em;
-  color: mix($color-text, white, 80%);
-  padding-top: 1em;
-}
+$font-family:or/ce
+$font-   gap: 1.25rem;
 
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  max-height: 75vh;
-  border-radius: $border-radius;
-}
+    
+$font-famlo
+$font-family: -apple-systcen  t$font-famiti
+// Light mode (default)
+$color-bg: #FEFDFC;
+: 0$color-bg: #FEFDFC;
+$c {$color-text: #403Ed:$color-headfa
+// Lig: // Light modhe$color-bg: #FEFDF  $c  $color-text: # t $color-heading: #100og: $color-border: #E6E4Drgin: 0 auto;
+  paddid   padding: 4$color-code-bg: #F5F4Fms:// Dark mode
+$dark-colbac$dark-c curs$dark-colba;
+  -moz-osx-f$dark-color-border: ar(--color-text);
+  transition: all 0.15s ease;
 
-blockquote {
-  padding: 1.5em;
-  margin: 0;
-  font-size: 0.88em;
-  background: $color-box-background;
-  border-radius: $border-radius;
-
-  p {
-    margin: 0;
-  }
-}
-
-hr {
-  width: 100%;
-  border: 0;
-  height: 1px;
-  margin: 1.5em 0;
-  background: $color-border;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.3;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-a {
-  transition: background 300ms;
-  padding: 0 0.1em;
-  text-decoration: none;
-  border-bottom: 1px solid $color-border;
-  color: $color-primary;
   &:hover {
-    color: black !important;
-    background: #fffaf1;
+  $dark-color-accent: #7B97AA {$dark-col  :root {
+  --color-bg: #{$cogn-  --co c  --color-text: #{$,   --co,   -b  --color-border: #{$color-bordet-size: 1.05rem;
+    font-weight: 600;  --color-code-bg: #{$color-code-
   }
-  &:after {
-    position: relative;
-    top: -0.5em;
-    font-size: 0.7em;
-    content: "↗";
-    color: #aaaaaa;
+
+[data-thent    font-weight: 600;  --color-code-bg: #{$cot-size:   }
+
+[data-theme="dark"] {
+  --color-b none  
+    &:h v
+[(--  --color-b none  
+ xt    &:hover {
+   ;
+       --colto
+$font-family:or/ce
+$font-   gap: 1.25rem;
+
+    
+$font-famlo
+$font-family: -apple-systcen  t$font-fam {
+$font-   gap: 1.2co
+    
+$font-famlo
+$foer-$foor$font-familo// Light mode (default)
+$color-bg: #FEFDFCaf$color-bg: #FEFDFC;
+: e;: 0$color-bg: #FEFnk$c {$color-text: #403ma// Lig: // Light modhe$color-bg: #FE    paddid   padding: 4$color-code-bg: #F5F4Fms:// Dark mode
+$dark-colbac$dark-c curs$dark-colba;
+  -moz-osx-f$dark-colorck$dark-colbac$dark-c curs$dark-colba;
+  -moz-osx-f$dark-corg  -moz-osx-f$dark-color-border: ar(
+b  transition: all 0.15s ease;
+
+  &:hover {
+  $da 1
+  &:hover {
+  $dark-color-alid  $dark-coor  --color-bg: #{$cogn-  --co c  --color-text: #{bo    font-weight: 600;  --color-code-bg: #{$color-code-
   }
-  &.internal-link:after,
-  &.footnote:after,
-  &.reversefootnote:after {
-    content: "";
+
+[data-thent    font-weight: 600;  --color-code-bg:no  }
+
+[data-thent    font-weight: 600;  --color-code-brg
+[: 2
+[data-theme="dark"] {
+  --color-b none  
+    &:h v
+[(-bg);
+  padding  --color-b none  
+ rd    &:h v
+[(--  - f[(--  --:  xt    &:hover {
+   ; "   ;
+       --co,   as$font-family:monospace;
+}
+
+pre {
+ 
+    
+$font-famlo
+$folor$fode-bg);
+  padd$font-   gap: 1.2co
+    
+$font-famlo
+$foew-    
+$font-famlo
+$ 1$fom $foer-$foo {$color-bg: #FEFDFCaf$color-bg: #FEFDFC;
+: e;:nt: e;: 0$color-bg: #FEFnk$c {$color-tex  $dark-colbac$dark-c curs$dark-colba;
+  -moz-osx-f$dark-colorck$dark-colbac$dark-c curs$dark-colba;
+  -moz-osx-f$dark-corg  -moz-osx-f$dark-colem  -moz-osx-f$dark-colorck$dark-colbad  -moz-osx-f$dark-corg  -moz-osx-f$dark-color-border: ar(
+b r-b  transition: all 0.15s ease;
+
+  &:hover {
+  $da 1
+  &:  
+  &:hover {
+  $da 1
+  &:hoveadd  $da 1
+om:   &:ho }  $dark-cot-  }
+
+[data-thent    font-weight: 600;  --color-code-bg:no  }
+
+[data-thent    font-weight: 600;  --color-code-brg
+[: 2
+[data-theme="da  
+[  m
+[data-thent    font-weight: 600;m;
+      font-weight: 50[: 2
+[data-theme="dark"] {
+  --color-b none  
+   : [da(-  --color-b none  
+       &:h v
+[(-bg);  [(-bg);
+or  padd-- rd    &:h v
+[(--  - f[(--  [(--  - f[(     ; "   ;
+       --co,   as$font-2.       --dd}
+
+pre {
+ 
+    
+$font-famlo
+$folor$fodear(-- 
+  r-bo$for)$folor$fod    padd$fontp: 0;
+    
+$font-famlo
+$foe
+  display$foew-    fl$font-famwr$ 1$fom p: 0: e;:nt: e;: 0$color-bg: #FEFnk$c {$color-tex  $dark-colba);  -moz-osx-f$dark-colorck$dark-colbac$dark-c curs$dark-colba;
+  -moz-osx-f$dark-coor  -moz-osx-f$dark-corg  -moz-osx-f$dark-colem  -moz-osx-f$danob r-b  transition: all 0.15s ease;
+
+  &:hover {
+  $da 1
+  &:  
+  &:hover {
+  $da 1
+  &:hoveadd  $da 1
+om:   &:ho }  $dark-cot-  }
+
+[data-t  
+  &:hover {
+  $da 1
+  &:  
+  &:hont  $da 1
+  re  &:   m  &:h-b  $da 1
+  em  &:ho
+ om:   &:ho }  $dayl
+[data-thent    font-w0;
+
+   
+[data-thent    font-weight: 600;  --color-cod   border: [: 2
+[data-theme="da  
+[  m
+[data-thent    font-w&:[daer[  m
+[data-thentor[daar      font-weight: 50[: 2
+[data-t }[data-theme="dark"] {
+  ge  --color-b none  
+ 
+    margin-bottom: 2       &:h v
+[(-bg);  [(-bgbottom: 0.25em;or  padd-- rd  / [(--  - f[(--  [(--  {
+       --co,   as$font-2.       - 1.5em
+pre {
+ 
+    
+$font-famlo
+$folor$fodr-b 
+  r);
+$foh3 {
+    font-  r-bo$for)$folo      
+$font-famlo
+$foe
+  display$foew- -spacin$foe
+  dis
+   dco  -moz-osx-f$dark-coor  -moz-osx-f$dark-corg  -moz-osx-f$dark-colem  -moz-osx-f$danob r-b  transition: all 0.15s ease;
+
+  &:hover {
+  $da 1
+  &:  
+  &:hover {
+  $daar
+  &:hover {
+  $da 1
+  &:  
+  &:hover {
+  $da 1
+  &:hoveadd  $da 1
+om:   &:ho }  $dark-cot-  }
+
+[data-t  
+  &:hover {e:   $da 1
+      &:  r: var(--  $da 1
+  d)  &:ho  om:   &:ho }  $dam;
+[data-t  
+  &:hover {
+  $ote  &:hoverg  $da 1
+  m;  &:  di  &:hp:  re  &:   m  r-  em  &:ho
+ om:   &:ho } r-border);
+  font-size: 0.85em;
+  
+   
+[data-thent    foed)[d
+ [data-theme="da  
+[  m
+[data-thent    font-w&:[daer[  m
+[dalo[  m
+[data-thentea[dag)[data-thentor[daar      font-weor[data-t }[data-theme="dark"] {
+  ge  --colm   ge  --color-b none  
+ 
+    m; 
+    margin-bottom: olor[(-bg);  [(-bgbottom: 0.25em;or R       --co,   as$font-2.       - 1.5em
+pre {
+ 
+    
+$font-famlo
+$f
+ pre {
+ 
+    
+$font-famlo
+$folor$fodr-b
+  
+  lex-$foec$folor$olumn  r);
+$foh3 {te$fohfl    fort$font-famlo
+$foe
+  display$av-ri$foe
+  dis    d:   dis
+    }
   }
-}
-
-*:focus {
-  background: #ffe8bc !important;
-  color: black !important;
-}
-
-nav {
-  margin: 1em 0 3em;
-}
-
-#notes-entry-container {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-areas:
-    "content"
-    "side";
-
-  @media (min-width: 700px) {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content side";
-  }
-}
-
-.backlink-box {
-  background: $color-box-background;
-  padding: 1em;
-  border-radius: $border-radius;
-}
-
-code {
-  background: #f5f5f5;
-  padding: 0.1em 0.2em;
-  border-radius: 4px;
-}
-
-.invalid-link {
-  color: #444444;
-  cursor: help;
-  background: #fafafa;
-  padding: 0 0.1em;
-}
-
-.invalid-link-brackets {
-  color: #ccc;
-  cursor: help;
 }
