@@ -22,11 +22,32 @@ layout: default
   {% endif %}
 </article>
 
-{% comment %} Build related list: shared tags first, then recent {% endcomment %}
+{% comment %} Build related list: 1) hand-picked (related property), 2) shared tags, 3) recent {% endcomment %}
 {% assign shared = '' | split: '' %}
 {% assign shared_urls = '' | split: '' %}
+
+{% comment %} 1. Hand-picked: add a `related` property in Obsidian with note names {% endcomment %}
+{% if page.related %}
+  {% for r in page.related %}
+    {% assign r_lower = r | downcase | strip %}
+    {% for note in site.notes %}
+      {% if note.url == page.url %}{% continue %}{% endif %}
+      {% if shared_urls contains note.url %}{% continue %}{% endif %}
+      {% assign nt = note.title | default: '' | downcase | strip %}
+      {% assign nb = note.relative_path | default: note.path | split: '/' | last | replace: '.md', '' | replace: '.markdown', '' | downcase %}
+      {% if nt == r_lower or nb == r_lower %}
+        {% assign shared = shared | push: note %}
+        {% assign shared_urls = shared_urls | push: note.url %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% comment %} 2. Notes sharing tags {% endcomment %}
 {% for note in site.notes %}
   {% if note.url == page.url %}{% continue %}{% endif %}
+  {% if shared_urls contains note.url %}{% continue %}{% endif %}
   {% if note.tags and page.tags %}
     {% for t in note.tags %}
       {% if page.tags contains t %}

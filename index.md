@@ -7,10 +7,10 @@ permalink: /
 {% assign dated = site.notes | where_exp: "item", "item.date != nil" | sort: 'date' | reverse %}
 {% assign undated = site.notes | where_exp: "item", "item.date == nil" %}
 
-{% if dated.size > 0 %}
-  {% assign latest = dated | first %}
-{% else %}
+{% if undated.size > 0 %}
   {% assign latest = undated | first %}
+{% else %}
+  {% assign latest = dated | first %}
 {% endif %}
 
 {% if latest %}
