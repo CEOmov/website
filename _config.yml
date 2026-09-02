@@ -5,23 +5,14 @@ url: ''
 
 permalink: pretty
 
-collections:
-  notes:
-    output: true
-    permalink: /:title
-  pages:
-    output: true
-
 defaults:
   - scope:
       path: ''
+      type: pages
     values:
       layout: default
   - scope:
-      path: _notes
+      path: ''
+      type: posts
     values:
-      layout: note
-  - scope:
-      path: _pages
-    values:
-      layout: default
+      layout: post

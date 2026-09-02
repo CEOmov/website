@@ -6,8 +6,7 @@ permalink: /
 
 <section class="latest">
   <h2>Latest</h2>
-  {% assign posts = site.notes | sort: 'date' | reverse %}
-  {% for post in posts %}
+  {% for post in site.posts %}
   <article class="post-item">
     <time>{{ post.date | date: '%B %d, %Y' }}</time>
     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -19,7 +18,7 @@ permalink: /
   {% endfor %}
 </section>
 
-{% assign all_tags = site.notes | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+{% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
 {% if all_tags.size > 0 and all_tags[0] != empty %}
 <section class="topics">
   <h2>Topics</h2>
