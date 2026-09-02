@@ -8,7 +8,7 @@ permalink: pretty
 collections:
   notes:
     output: true
-    permalink: /:name/
+    permalink: /:slug/
 
 defaults:
   - scope:

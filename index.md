@@ -23,7 +23,8 @@ permalink: /
     <time>{{ latest.date | date: '%B %d, %Y' }} · {{ latest.content | number_of_words | divided_by: 200 | at_least: 1 }} minute read</time>
     {% endif %}
     {% if latest.excerpt %}
-    <p class="excerpt">{{ latest.excerpt | strip_html | truncatewords: 40 }} <a href="{{ site.baseurl }}{{ latest.url }}" class="read-more">Keep reading →</a></p>
+    <p class="excerpt">{{ latest.excerpt | strip_html | truncatewords: 12 }}</p>
+    <p><a href="{{ site.baseurl }}{{ latest.url }}" class="read-more">Keep reading →</a></p>
     {% endif %}
   </article>
 </section>
