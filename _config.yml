@@ -1,2 +1,21 @@
 title: Karim Abdelali
+description: Personal website
 baseurl: ''
+url: ''
+
+permalink: pretty
+
+collections:
+  notes:
+    output: true
+    permalink: /:slug
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+  - scope:
+      path: _notes
+    values:
+      layout: note
