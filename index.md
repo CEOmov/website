@@ -37,7 +37,7 @@ permalink: /
   <h2>Topics</h2>
   <p class="tag-list">
     {% for tag in all_tags %}
-    <a href="{{ site.baseurl }}/topics/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+    <a href="{{ site.baseurl }}/topics/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
     {% endfor %}
   </p>
 </section>
@@ -46,7 +46,7 @@ permalink: /
 <hr>
 
 <section class="writing">
-  <h2>Writing</h2>
+  <h2><a href="{{ site.baseurl }}/writing/">Writing</a></h2>
   <ul class="archive">
     {% for post in dated %}
     <li>

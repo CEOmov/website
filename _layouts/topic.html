@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% assign tag = page.tag %}
+{% assign entries = site.notes | where_exp: "item", "item.tags contains tag" %}
+{% assign dated = entries | where_exp: "item", "item.date != nil" | sort: 'date' | reverse %}
+{% assign undated = entries | where_exp: "item", "item.date == nil" %}
+
+<div class="topic-heading">
+  <h1><span class="muted-word">Topics</span> / {{ tag }}</h1>
+</div>
+
+<p class="topic-count">{{ entries.size }} entries about this topic</p>
+
+<ul class="archive">
+  {% for post in dated %}
+  <li>
+    <span class="archive-date">{{ post.date | date: '%Y · %m' }}</span>
+    {% assign t = post.title | default: post.relative_path | default: post.path | split: '/' | last | replace: '.md', '' | replace: '.markdown', '' %}
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ t }}</a>
+  </li>
+  {% endfor %}
+  {% for post in undated %}
+  <li>
+    {% assign t = post.title | default: post.relative_path | default: post.path | split: '/' | last | replace: '.md', '' | replace: '.markdown', '' %}
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ t }}</a>
+  </li>
+  {% endfor %}
+</ul>

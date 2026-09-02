@@ -16,8 +16,58 @@ layout: default
   {% if page.tags.size > 0 %}
   <div class="tags">
     {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/topics#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+    <a href="{{ site.baseurl }}/topics/{{ tag | slugify }}/" class="tag">{{ tag }}</a>{% unless forloop.last %}<span class="tag-comma">, </span>{% endunless %}
     {% endfor %}
   </div>
   {% endif %}
 </article>
+
+{% comment %} Build related list: shared tags first, then recent {% endcomment %}
+{% assign shared = '' | split: '' %}
+{% assign shared_urls = '' | split: '' %}
+{% for note in site.notes %}
+  {% if note.url == page.url %}{% continue %}{% endif %}
+  {% if note.tags and page.tags %}
+    {% for t in note.tags %}
+      {% if page.tags contains t %}
+        {% unless shared_urls contains note.url %}
+          {% assign shared = shared | push: note %}
+          {% assign shared_urls = shared_urls | push: note.url %}
+        {% endunless %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% if shared.size < 10 %}
+  {% assign others = site.notes | where_exp: "item", "item.url != page.url" %}
+  {% assign dated_others = others | where_exp: "item", "item.date != nil" | sort: 'date' | reverse %}
+  {% assign undated_others = others | where_exp: "item", "item.date == nil" %}
+  {% for note in dated_others %}
+    {% if shared.size >= 10 %}{% break %}{% endif %}
+    {% unless shared_urls contains note.url %}
+      {% assign shared = shared | push: note %}
+      {% assign shared_urls = shared_urls | push: note.url %}
+    {% endunless %}
+  {% endfor %}
+  {% for note in undated_others %}
+    {% if shared.size >= 10 %}{% break %}{% endif %}
+    {% unless shared_urls contains note.url %}
+      {% assign shared = shared | push: note %}
+      {% assign shared_urls = shared_urls | push: note.url %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+{% if shared.size > 0 %}
+<hr>
+<section class="related">
+  <h2>You might also enjoy</h2>
+  <ul class="plain-list">
+    {% for note in shared limit: 10 %}
+    <li><a href="{{ site.baseurl }}{{ note.url }}">{{ note.title | default: note.relative_path | default: note.path | split: '/' | last | replace: '.md', '' | replace: '.markdown', '' }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

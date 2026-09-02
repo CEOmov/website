@@ -7,8 +7,18 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
+  {% assign crumb = '' %}
+  {% if page.collection == 'notes' or page.layout == 'post' %}
+    {% assign crumb = 'Writing' %}
+  {% elsif page.url == '/topics/' or page.layout == 'topic' %}
+    {% assign crumb = 'Topics' %}
+  {% endif %}
+
   <nav>
-    <a href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
+    <div class="site-name">
+      <a href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
+      {% if crumb != '' %}<span class="crumb">/ {{ crumb }}</span>{% endif %}
+    </div>
     <div class="nav-links">
       <a href="{{ site.baseurl }}/about">About</a>
       <a href="{{ site.baseurl }}/now">Now</a>
@@ -21,7 +31,9 @@
   </main>
   
   <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    <p class="footer-label">Receive my updates</p>
+    <p>Follow me via <a href="https://ceomov.substack.com/subscribe">email</a>, <a href="https://www.instagram.com/ceo.mov">Instagram</a>, <a href="https://x.com/ceomov">X</a>, <a href="https://www.youtube.com/@ceomov">YouTube</a>, and <a href="https://ceomov.substack.com/">Substack</a>.</p>
+    <!-- Substack signup embed goes here -->
   </footer>
 
   <script>
