@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Topics
-permalink: /topics
+permalink: /topics/
 ---
 
 # Topics
