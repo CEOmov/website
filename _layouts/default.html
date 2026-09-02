@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-  <body>
-    <nav>{% include nav.html %}</nav>
-    <div class="wrapper">
-      <main>{{ content }}</main>
-      <footer>{% include footer.html %}</footer>
-    </div>
-
-    {% include link-previews.html wrapperQuerySelector="content" %}
-  </body>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/"><b>{{ site.title }}</b></a>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+</body>
 </html>
