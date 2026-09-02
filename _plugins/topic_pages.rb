@@ -8,6 +8,14 @@ module Jekyll
     priority :low
 
     def generate(site)
+      generate_topic_pages(site)
+    rescue StandardError => e
+      Jekyll.logger.warn('TopicPages:', "skipped due to error: #{e.message}")
+    end
+
+    private
+
+    def generate_topic_pages(site)
       return unless site.collections.key?('notes')
       return if site.collections['notes'].docs.nil?
 
