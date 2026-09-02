@@ -1,5 +1,6 @@
 {
-  "buildCommand": "bundle exec jekyll build",
+  "buildCommand": "jekyll build",
   "outputDirectory": "_site",
-  "framework": "jekyll"
+  "framework": "jekyll",
+  "installCommand": "bundle install --jobs=1"
 }
