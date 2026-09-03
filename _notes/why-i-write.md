@@ -1,6 +1,7 @@
 ---
-title: "Why I Write"
+title: Why I Write
 slug: why-i-write
+Date: 2026-09-02
 tags: []
 ---
 this is a new post vrtseb
