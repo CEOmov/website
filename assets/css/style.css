@@ -57,6 +57,11 @@ nav {
   color: var(--muted);
   font-size: 1.35rem;
   margin-left: 0.35em;
+  text-decoration: none;
+}
+
+.crumb:hover {
+  color: var(--text);
 }
 
 .nav-links {

@@ -20,7 +20,7 @@
   <nav>
     <div class="site-name">
       <a href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
-      {% if crumb != '' %}<span class="crumb">/ {{ crumb }}</span>{% endif %}
+      {% if crumb != '' %}<a class="crumb" href="{{ site.baseurl }}/{{ crumb | downcase }}/">/ {{ crumb }}</a>{% endif %}
     </div>
     <div class="nav-links">
       <a href="{{ site.baseurl }}/about">About</a>
