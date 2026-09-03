@@ -1,5 +1,6 @@
 ---
 title: "Why I Write"
+slug: why-i-write
 tags: []
 ---
 this is a new post vrtseb

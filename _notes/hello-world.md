@@ -1,5 +1,6 @@
 ---
 title: Hello World
+slug: hello-world
 date: 2026-09-02
 tags: [thoughts]
 ---

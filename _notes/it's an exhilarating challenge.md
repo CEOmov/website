@@ -1,5 +1,6 @@
 ---
 title: An Exhilarating Challenge
+slug: an-exhilarating-challenge
 tags:
   - Islam
 date: 2026-09-03
