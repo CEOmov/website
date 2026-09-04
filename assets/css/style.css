@@ -1,52 +1,28 @@
 /* Flexoki-based theme (Steph Ango's color system) */
 
-/* ---------- Atkinson Hyperlegible Next (self-hosted) ---------- */
+/* ---------- Acid Grotesk (self-hosted) ---------- */
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/assets/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-family: 'Acid Grotesk';
+  src: url('/assets/fonts/AcidGrotesk-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/assets/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/assets/fonts/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-family: 'Acid Grotesk';
+  src: url('/assets/fonts/AcidGrotesk-Bold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/assets/fonts/AtkinsonHyperlegibleNext-SemiBoldItalic.woff2') format('woff2');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/assets/fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-family: 'Acid Grotesk';
+  src: url('/assets/fonts/AcidGrotesk-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/assets/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -71,7 +47,7 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Acid Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.15rem;
   line-height: 1.65;
   max-width: 1000px;
